@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "canvas": {"aspect": "16:9", "resolution": [1920, 1080], "fps": 30},
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "t": [0.0, 2.0],
+      "shot": {"src": "clips/01.mp4", "in": 0.5, "framing": "close"},
+      "text": {"content": "this jams every time", "pos": "center"},
+      "cue": "open on the failure, not on the product"
+    },
+    {
+      "id": "demo",
+      "role": "development",
+      "t": [2.0, 11.5],
+      "shot": {"src": "clips/02.mp4", "in": 4.0, "framing": "medium"},
+      "text": {"content": "one moving part", "pos": "bottom"},
+      "cue": "single unbroken take of the mechanism working; no cutaways"
+    },
+    {
+      "id": "proof",
+      "role": "payoff",
+      "t": [11.5, 18.0],
+      "shot": {"src": "clips/03.mp4", "in": 2.2, "framing": "wide"},
+      "text": {"content": "no cuts, no jam", "pos": "bottom"},
+      "cue": "hold the take long enough that the absence of a cut is the proof"
+    },
+    {
+      "id": "cta",
+      "role": "cta",
+      "t": [18.0, 22.0],
+      "shot": {"src": "clips/04.mp4", "in": 0.0, "framing": "medium"},
+      "text": {"content": "link in bio", "pos": "bottom"},
+      "cue": "ask once, with the product still in frame; no end card"
+    }
+  ],
+  "subtitles": {"mode": "none"},
+  "provenance": {"packet": "shorti-packet-drawer-slide.md"}
+}

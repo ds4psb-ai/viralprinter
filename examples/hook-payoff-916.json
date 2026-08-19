@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "canvas": {"aspect": "9:16", "resolution": [1080, 1920], "fps": 30},
+  "audio": {"music": {"src": "assets/music.mp3", "gain_db": -18}},
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "t": [0.0, 1.4],
+      "shot": {"src": "clips/01.mp4", "in": 3.4, "framing": "close"},
+      "text": {"content": "wait for it", "pos": "center"},
+      "cue": "cold open on the messiest corner, no logo, no intro card"
+    },
+    {
+      "id": "work",
+      "role": "development",
+      "t": [1.4, 9.6],
+      "shot": {"src": "clips/02.mp4", "in": 0.0, "framing": "medium"},
+      "text": {"content": "one drawer at a time", "pos": "top"},
+      "cue": "hands stay in frame the whole time; never cut to a wide"
+    },
+    {
+      "id": "reveal",
+      "role": "payoff",
+      "t": [9.6, 14.0],
+      "shot": {"src": "clips/03.mp4", "in": 12.6, "framing": "close"},
+      "text": {"content": "same desk", "pos": "center"},
+      "cue": "match the opening angle exactly so the change reads in one frame"
+    }
+  ],
+  "subtitles": {"mode": "none"},
+  "provenance": {"packet": "shorti-packet-desk-reset.md"}
+}

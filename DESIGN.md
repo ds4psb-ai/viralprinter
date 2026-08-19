@@ -1,4 +1,4 @@
-# viralint — design contract (v0)
+# viralprinter — design contract (v0)
 
 Open-source **composer + grader** for short-form video. The private evidence
 engine (Shorti) *designs*; this repo *renders and judges*. This file is the
@@ -12,7 +12,7 @@ this file wins.
 2. **Compose** — render a timeline to an mp4 with ffmpeg. Local, deterministic,
    no accounts.
 3. **Grade** — score any short (an mp4, or a timeline statically) against
-   viral-structure rules. Categories and bands live in `src/viralint/grade/rules/*.yaml`.
+   viral-structure rules. Categories and bands live in `src/viralprinter/grade/rules/*.yaml`.
 4. **SKILL.md** — the distribution surface: one paste into Claude Code / Cursor
    / any agent CLI drives the whole loop.
 
@@ -66,15 +66,15 @@ of `hook | development | payoff | cta | other`. Everything optional except
 ## Module interfaces (frozen for v0 — code to these names)
 
 ```python
-# src/viralint/timeline/__init__.py          (Agent A)
+# src/viralprinter/timeline/__init__.py          (Agent A)
 load(path: str | Path) -> Timeline            # validates; raises TimelineError
 validate(obj: dict) -> list[str]               # [] when valid
 
-# src/viralint/compose/__init__.py            (Agent A)
+# src/viralprinter/compose/__init__.py            (Agent A)
 render(timeline: Timeline, out: str | Path, *, dry_run: bool = False) -> Path
 # ffmpeg/ffprobe via subprocess only; raise ComposeError with the ffmpeg stderr tail
 
-# src/viralint/grade/__init__.py              (Agent B)
+# src/viralprinter/grade/__init__.py              (Agent B)
 grade_video(path: str | Path) -> Scorecard
 grade_timeline(t: Timeline | dict) -> Scorecard
 # Scorecard: .categories -> list[CategoryResult(name, state, measured, band, verdict, why)]
@@ -83,9 +83,9 @@ grade_timeline(t: Timeline | dict) -> Scorecard
 # No single overall score — the card IS the result.
 
 # cli.py                                       (Agent A wires; B's functions behind it)
-viralint validate <timeline.json>
-viralint compose <timeline.json> -o out.mp4 [--dry-run]
-viralint grade <file.mp4 | timeline.json> [--json | --markdown]
+viralprinter validate <timeline.json>
+viralprinter compose <timeline.json> -o out.mp4 [--dry-run]
+viralprinter grade <file.mp4 | timeline.json> [--json | --markdown]
 ```
 
 ## Grader v0 categories (Agent B owns; measured with ffmpeg/ffprobe only)
@@ -104,13 +104,13 @@ metadata in v0.
 
 ## Ownership map (parallel build — do not cross)
 
-- **Agent A**: `src/viralint/timeline/`, `src/viralint/compose/`, `cli.py`,
+- **Agent A**: `src/viralprinter/timeline/`, `src/viralprinter/compose/`, `cli.py`,
   `test/test_timeline.py`, `test/test_compose.py`
-- **Agent B**: `src/viralint/grade/` (incl. `rules/`), `test/test_grade.py`
+- **Agent B**: `src/viralprinter/grade/` (incl. `rules/`), `test/test_grade.py`
 - **Agent C**: `SKILL.md`, `README.md`, `README-ko.md`, `README-zh.md`,
   `examples/` (2 sample timelines + 1 example scorecard markdown)
 - Orchestrator only: `pyproject.toml`, `DESIGN.md`, `LICENSE`, `.gitignore`,
-  `src/viralint/__init__.py`, `providers/`, `shorti/` (both empty stubs in v0),
+  `src/viralprinter/__init__.py`, `providers/`, `shorti/` (both empty stubs in v0),
   all git operations. **Builders never run git.**
 
 ## Engineering policy

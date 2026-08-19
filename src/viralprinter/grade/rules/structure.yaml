@@ -1,0 +1,74 @@
+# viralprinter grader rules — v0
+#
+# Every band here is a coarse, hand-set placeholder. They encode the shape of a
+# rule (which axis is measured, and roughly where the edges sit), not a measured
+# threshold. `provenance: provisional` says exactly that: a later regeneration
+# from evidence replaces these numbers, and until then no band should be quoted
+# as a finding. Precision that was never measured is not invented here.
+#
+# Per-rule fields are limited to: category, band, provenance, why.
+
+rules:
+  - category: hook_window
+    band:
+      unit: seconds
+      onset_max: 2.0
+      length_min: 0.5
+      length_max: 3.0
+    provenance: provisional
+    why: >-
+      Short-form viewers commit or leave in the opening moments, so a hook that
+      starts later than about two seconds, or runs long without resolving, has
+      already spent the attention it was meant to buy.
+
+  - category: cut_cadence
+    band:
+      unit: cuts_per_10s
+      duration_classes:
+        - name: short
+          duration: {max: 20.0}
+          min: 3.0
+          max: 14.0
+        - name: medium
+          duration: {min: 20.0, max: 40.0}
+          min: 2.5
+          max: 11.0
+        - name: long
+          duration: {min: 40.0}
+          min: 2.0
+          max: 9.0
+    provenance: provisional
+    why: >-
+      A short holds attention by changing what is on screen, but a longer clip
+      needs a calmer rhythm than a very short one, so the workable range of cuts
+      per ten seconds narrows as the clip gets longer.
+
+  - category: duration_fit
+    band:
+      unit: seconds
+      min: 7.0
+      max: 60.0
+    provenance: provisional
+    why: >-
+      Below roughly seven seconds there is no room to pay a hook off, and past
+      about a minute a short-form clip stops being one thing a viewer watches
+      whole.
+
+  - category: structure_completeness
+    band:
+      required_roles: [hook, development, payoff]
+    provenance: provisional
+    why: >-
+      A short that never develops or never pays off gives the viewer nothing to
+      stay for once the hook has landed.
+
+  - category: text_density
+    band:
+      unit: chars_on_screen
+      min: 3.0
+      max: 45.0
+    provenance: provisional
+    why: >-
+      Measured as the time-weighted mean number of characters on screen: too
+      little and a muted viewer is lost, too much and the text competes with the
+      shot it is supposed to label.
