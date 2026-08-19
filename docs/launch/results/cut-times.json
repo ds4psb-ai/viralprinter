@@ -1,0 +1,462 @@
+{
+  "what": "Supplementary measurement: the full list of scene-change times per clip.",
+  "why": "The v0 grade CLI reports only the first cut time and a cuts-per-10s rate. The cut-grid finding in the launch post is a claim about every cut, so the times behind it are recorded here rather than asserted.",
+  "how": "viralprinter.grade._detect_cuts and _probe_duration, called directly. Same instrument and same threshold the graded cards used (ffmpeg scdet, t=10.0).",
+  "limit": "scdet reports scene-change events, not authored cuts. A missing multiple in an otherwise regular series may be a cut between two visually similar stock clips that did not score above threshold; from outside the file that case cannot be distinguished from a genuinely longer shot. A dissolve or animated transition can score as many consecutive events rather than one.",
+  "measured_at_utc": "2026-08-19T12:08Z",
+  "grader": {
+    "repo": "https://github.com/ds4psb-ai/viralprinter",
+    "package_version": "0.1.0",
+    "commit": "d525acc",
+    "rules_file": "src/viralprinter/grade/rules/structure.yaml",
+    "rules_sha256": "7909395d2ebf72fd467e568880ddadfe224cdc18f373a3db50d5ca8240ab31b9",
+    "rules_provenance": "provisional",
+    "command": "PYTHONPATH=src .venv/bin/python cli.py grade <file>.mp4 --json",
+    "scene_detector": "ffmpeg scdet, threshold 10.0 (the filter's own default)"
+  },
+  "clips": {
+    "02-zh-landscape-deep-ocean": {
+      "duration_s": 23.13,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        16.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "03-zh-portrait-city-morning": {
+      "duration_s": 13.6,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "04-zh-landscape-reading-power": {
+      "duration_s": 23.23,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        5.0,
+        10.0,
+        15.0,
+        20.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "05-zh-portrait-clean-energy": {
+      "duration_s": 24.2,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0,
+        21.0,
+        24.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "06-zh-landscape-pour-over-coffee": {
+      "duration_s": 22.6,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0,
+        21.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "07-zh-portrait-space-exploration": {
+      "duration_s": 26.9,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "08-zh-landscape-spring-journey": {
+      "duration_s": 14.03,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        3.0,
+        6.0,
+        9.0,
+        9.0667,
+        9.2,
+        9.3667,
+        9.5333,
+        9.7,
+        9.8667,
+        10.0333,
+        10.2,
+        10.3667,
+        10.5333,
+        10.7,
+        10.8667,
+        11.0333,
+        11.2,
+        11.3667,
+        11.5333,
+        11.7,
+        11.8667,
+        12.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "09-en-portrait-future-robotics": {
+      "duration_s": 20.73,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "10-en-landscape-ocean-conservation": {
+      "duration_s": 24.63,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        8.0,
+        12.0,
+        20.0,
+        24.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "11-en-portrait-small-habits": {
+      "duration_s": 19.13,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        2.0,
+        4.0,
+        6.0,
+        8.0,
+        10.0,
+        12.0,
+        14.0,
+        16.0,
+        18.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "13-en-portrait-creative-work": {
+      "duration_s": 19.9,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        12.0,
+        16.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "14-en-landscape-sustainable-cities": {
+      "duration_s": 26.6,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "15-en-portrait-coffee-science": {
+      "duration_s": 22.73,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0,
+        21.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "16-en-landscape-mountain-perspective": {
+      "duration_s": 17.7,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "17-zh-portrait-seed-journey": {
+      "duration_s": 43.6,
+      "fps": "30/1",
+      "w": "1080",
+      "h": "1920",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0,
+        32.0,
+        36.0,
+        40.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    },
+    "18-en-landscape-history-of-flight": {
+      "duration_s": 59.07,
+      "fps": "30/1",
+      "w": "1920",
+      "h": "1080",
+      "cut_times_s": [
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0,
+        32.0,
+        36.0,
+        40.0,
+        48.0,
+        52.0,
+        56.0
+      ],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "has_subtitle_stream": false
+    }
+  },
+  "streams_note": "Stream inventory added so the post's claim about burned-in text is checkable: no clip carries a subtitle stream, so any text a viewer sees is in the pixels and outside what the v0 grader can read.",
+  "burned_in_text_spot_check": {
+    "method": "ffmpeg -ss <t> -frames:v 1, one frame per clip, inspected by eye",
+    "checked_at_utc": "2026-08-19T12:14Z",
+    "clips_checked": [
+      {
+        "video": "15-en-portrait-coffee-science",
+        "at_s": 5,
+        "caption_visible": true,
+        "caption_text": "Roasting transforms sugars and acids inside the bean"
+      },
+      {
+        "video": "02-zh-landscape-deep-ocean",
+        "at_s": 7,
+        "caption_visible": true,
+        "caption_text": "生命依然寻找着自己的光"
+      }
+    ],
+    "limit": "Two of 16 clips were inspected visually. The no-subtitle-stream fact below covers all 16; the burned-in caption observation covers only these two."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "video": "02-zh-landscape-deep-ocean",
+  "title": "Light in the Deep Ocean",
+  "narration_language": "Chinese",
+  "orientation": "landscape",
+  "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/02-zh-landscape-deep-ocean.mp4",
+  "source_page": "https://harry0703.github.io/mpt-assets/?video=02-zh-landscape-deep-ocean.mp4",
+  "sha256": "5f0f94f9628c7a39f704d0b4de87a8349b8f288563a8dc732efd9355f9412ee5",
+  "downloaded_at_utc": "2026-08-19T12:05:20Z",
+  "http_status": 200,
+  "graded_at_utc": "2026-08-19T12:07:17Z",
+  "grader": {
+    "repo": "https://github.com/ds4psb-ai/viralprinter",
+    "package_version": "0.1.0",
+    "commit": "d525acc",
+    "rules_file": "src/viralprinter/grade/rules/structure.yaml",
+    "rules_sha256": "7909395d2ebf72fd467e568880ddadfe224cdc18f373a3db50d5ca8240ab31b9",
+    "rules_provenance": "provisional",
+    "command": "PYTHONPATH=src .venv/bin/python cli.py grade <file>.mp4 --json",
+    "scene_detector": "ffmpeg scdet, threshold 10.0 (the filter's own default)"
+  },
+  "scorecard": {
+    "categories": [
+      {
+        "name": "hook_window",
+        "state": "measured",
+        "measured": 4.0,
+        "band": {
+          "unit": "seconds",
+          "onset_max": 2.0,
+          "length_min": 0.5,
+          "length_max": 3.0
+        },
+        "verdict": "out_of_band",
+        "why": "Short-form viewers commit or leave in the opening moments, so a hook that starts later than about two seconds, or runs long without resolving, has already spent the attention it was meant to buy."
+      },
+      {
+        "name": "cut_cadence",
+        "state": "measured",
+        "measured": 1.297,
+        "band": {
+          "unit": "cuts_per_10s",
+          "min": 2.5,
+          "max": 11.0,
+          "duration_class": "medium"
+        },
+        "verdict": "out_of_band",
+        "why": "A short holds attention by changing what is on screen, but a longer clip needs a calmer rhythm than a very short one, so the workable range of cuts per ten seconds narrows as the clip gets longer."
+      },
+      {
+        "name": "duration_fit",
+        "state": "measured",
+        "measured": 23.13,
+        "band": {
+          "unit": "seconds",
+          "min": 7.0,
+          "max": 60.0
+        },
+        "verdict": "in_band",
+        "why": "Below roughly seven seconds there is no room to pay a hook off, and past about a minute a short-form clip stops being one thing a viewer watches whole."
+      },
+      {
+        "name": "structure_completeness",
+        "state": "not_measured",
+        "measured": null,
+        "band": {
+          "required_roles": [
+            "hook",
+            "development",
+            "payoff"
+          ]
+        },
+        "verdict": null,
+        "why": "Beat roles are an authoring fact, not a pixel fact: nothing in an encoded video says which shot was meant as hook, development, or payoff. Grade the timeline to measure this."
+      },
+      {
+        "name": "text_density",
+        "state": "not_measured",
+        "measured": null,
+        "band": {
+          "unit": "chars_on_screen",
+          "min": 3.0,
+          "max": 45.0
+        },
+        "verdict": null,
+        "why": "Reading on-screen text out of pixels needs OCR, which v0 does not ship. Grade the timeline instead, where the text is declared rather than inferred."
+      }
+    ]
+  }
+}

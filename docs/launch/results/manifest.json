@@ -1,0 +1,235 @@
+{
+  "subject": "MoneyPrinterTurbo demo videos",
+  "subject_repo": "https://github.com/harry0703/MoneyPrinterTurbo",
+  "source_readmes": [
+    {
+      "url": "https://raw.githubusercontent.com/harry0703/MoneyPrinterTurbo/main/README.md",
+      "sha256": "9fee74d5ae9f115a88f25ec212737bc276cdcecc9e3d7b78063654516d426830",
+      "fetched_at_utc": "2026-08-19T12:09:08Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/harry0703/MoneyPrinterTurbo/main/README-en.md",
+      "sha256": "8ce7eaa6bf4aa6e26da5418db4733408ac62354be89eb0ebfa5a6469eff8b9b4",
+      "fetched_at_utc": "2026-08-19T12:09:08Z"
+    }
+  ],
+  "how_urls_were_found": "Both READMEs link each demo through a viewer page https://harry0703.github.io/mpt-assets/?video=<name>.mp4 and show a thumbnail served from the mpt-assets release assets. The mp4 was fetched from the matching release-asset path: https://github.com/harry0703/mpt-assets/releases/download/assets/<name>.mp4",
+  "attempted": 16,
+  "downloaded": 16,
+  "graded": 16,
+  "download_failures": [],
+  "grade_failures": [],
+  "grader": {
+    "repo": "https://github.com/ds4psb-ai/viralprinter",
+    "package_version": "0.1.0",
+    "commit": "d525acc",
+    "rules_file": "src/viralprinter/grade/rules/structure.yaml",
+    "rules_sha256": "7909395d2ebf72fd467e568880ddadfe224cdc18f373a3db50d5ca8240ab31b9",
+    "rules_provenance": "provisional",
+    "command": "PYTHONPATH=src .venv/bin/python cli.py grade <file>.mp4 --json",
+    "scene_detector": "ffmpeg scdet, threshold 10.0 (the filter's own default)"
+  },
+  "videos": [
+    {
+      "video": "02-zh-landscape-deep-ocean",
+      "title": "Light in the Deep Ocean",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/02-zh-landscape-deep-ocean.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "5f0f94f9628c7a39f704d0b4de87a8349b8f288563a8dc732efd9355f9412ee5",
+      "downloaded_at_utc": "2026-08-19T12:05:20Z",
+      "graded_at_utc": "2026-08-19T12:07:17Z",
+      "receipt": "02-zh-landscape-deep-ocean.json"
+    },
+    {
+      "video": "03-zh-portrait-city-morning",
+      "title": "When the City Wakes",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/03-zh-portrait-city-morning.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "0fa80dd4199af8bf81180b369eff838ffbfd6e24ab99e3f42ae691578ae1a3df",
+      "downloaded_at_utc": "2026-08-19T12:05:24Z",
+      "graded_at_utc": "2026-08-19T12:07:18Z",
+      "receipt": "03-zh-portrait-city-morning.json"
+    },
+    {
+      "video": "04-zh-landscape-reading-power",
+      "title": "How Reading Shapes Us",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/04-zh-landscape-reading-power.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "408f63c244ad253352ffa3cd2117813c87acf11df8adb2f0369acde21d43676e",
+      "downloaded_at_utc": "2026-08-19T12:05:25Z",
+      "graded_at_utc": "2026-08-19T12:07:19Z",
+      "receipt": "04-zh-landscape-reading-power.json"
+    },
+    {
+      "video": "05-zh-portrait-clean-energy",
+      "title": "The Future of Clean Energy",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/05-zh-portrait-clean-energy.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "86eef2e1b8be373c45828d972907201b950d9c6babe7f0d46ccc31d6a0f178de",
+      "downloaded_at_utc": "2026-08-19T12:05:27Z",
+      "graded_at_utc": "2026-08-19T12:07:19Z",
+      "receipt": "05-zh-portrait-clean-energy.json"
+    },
+    {
+      "video": "06-zh-landscape-pour-over-coffee",
+      "title": "The Details of Pour-Over Coffee",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/06-zh-landscape-pour-over-coffee.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "b985dd869914fbc8d6ee84d5a53587c0c43b64aa515542ec1846189c57b868c0",
+      "downloaded_at_utc": "2026-08-19T12:05:30Z",
+      "graded_at_utc": "2026-08-19T12:07:20Z",
+      "receipt": "06-zh-landscape-pour-over-coffee.json"
+    },
+    {
+      "video": "07-zh-portrait-space-exploration",
+      "title": "Why We Still Explore Space",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/07-zh-portrait-space-exploration.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "0c914097974e89d8abba9a19a7be7794f2fe0dc6b119605696eac9847176cc4b",
+      "downloaded_at_utc": "2026-08-19T12:05:32Z",
+      "graded_at_utc": "2026-08-19T12:07:20Z",
+      "receipt": "07-zh-portrait-space-exploration.json"
+    },
+    {
+      "video": "08-zh-landscape-spring-journey",
+      "title": "Spring Is Made for Travel",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/08-zh-landscape-spring-journey.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "d28d91d8d16e02086c56145c78f501a181c3c56dcb639eeb0adf3e1e208be3f5",
+      "downloaded_at_utc": "2026-08-19T12:05:36Z",
+      "graded_at_utc": "2026-08-19T12:07:21Z",
+      "receipt": "08-zh-landscape-spring-journey.json"
+    },
+    {
+      "video": "09-en-portrait-future-robotics",
+      "title": "The Future of Everyday Robotics",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/09-en-portrait-future-robotics.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "6469a6c6cff7c40ecd775760e91e78d01ce83f541d59b81e6902082f618ab75a",
+      "downloaded_at_utc": "2026-08-19T12:05:40Z",
+      "graded_at_utc": "2026-08-19T12:07:22Z",
+      "receipt": "09-en-portrait-future-robotics.json"
+    },
+    {
+      "video": "10-en-landscape-ocean-conservation",
+      "title": "Why Ocean Conservation Matters",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/10-en-landscape-ocean-conservation.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "dae4a876aa6db15f6bb2b5919d040a6297b5f3077a2d0d3e908bd5a3b59970ab",
+      "downloaded_at_utc": "2026-08-19T12:05:41Z",
+      "graded_at_utc": "2026-08-19T12:07:22Z",
+      "receipt": "10-en-landscape-ocean-conservation.json"
+    },
+    {
+      "video": "11-en-portrait-small-habits",
+      "title": "Small Habits, Lasting Change",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/11-en-portrait-small-habits.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "9247378ff438532d29614e510214d1539823ae1cc170f0c036fdb55ffd832dc1",
+      "downloaded_at_utc": "2026-08-19T12:05:45Z",
+      "graded_at_utc": "2026-08-19T12:07:23Z",
+      "receipt": "11-en-portrait-small-habits.json"
+    },
+    {
+      "video": "13-en-portrait-creative-work",
+      "title": "Making Space for Creative Work",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/13-en-portrait-creative-work.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "1b2a4c6fad71c61c315fe8be59d28eb4a8f50cf32576dea41ebcf0c352490eac",
+      "downloaded_at_utc": "2026-08-19T12:05:47Z",
+      "graded_at_utc": "2026-08-19T12:07:24Z",
+      "receipt": "13-en-portrait-creative-work.json"
+    },
+    {
+      "video": "14-en-landscape-sustainable-cities",
+      "title": "Designing More Sustainable Cities",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/14-en-landscape-sustainable-cities.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "3ea3e15e05e51f1ca8ee94683442a0a4f3f28f265884c8f2df31984f426de5a1",
+      "downloaded_at_utc": "2026-08-19T12:05:49Z",
+      "graded_at_utc": "2026-08-19T12:07:24Z",
+      "receipt": "14-en-landscape-sustainable-cities.json"
+    },
+    {
+      "video": "15-en-portrait-coffee-science",
+      "title": "The Science Inside Coffee",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/15-en-portrait-coffee-science.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "30aee35b130bb7af8576155b4dbf2e8e35c7ce6ed7b2b51cbabc9cfa12033cf2",
+      "downloaded_at_utc": "2026-08-19T12:05:52Z",
+      "graded_at_utc": "2026-08-19T12:07:25Z",
+      "receipt": "15-en-portrait-coffee-science.json"
+    },
+    {
+      "video": "16-en-landscape-mountain-perspective",
+      "title": "What Mountains Teach Us",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/16-en-landscape-mountain-perspective.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "1248061b0fb0d4b83fed04f71f4a9f0bae0ac00aee9faebbae20ed2c5767d631",
+      "downloaded_at_utc": "2026-08-19T12:05:54Z",
+      "graded_at_utc": "2026-08-19T12:07:26Z",
+      "receipt": "16-en-landscape-mountain-perspective.json"
+    },
+    {
+      "video": "17-zh-portrait-seed-journey",
+      "title": "A Seed's Journey",
+      "narration_language": "Chinese",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/17-zh-portrait-seed-journey.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "f3c21c3c4e148c5de1d7f9a1f1bf403c51a67d1801f3c13da8d789b8d477bed6",
+      "downloaded_at_utc": "2026-08-19T12:05:56Z",
+      "graded_at_utc": "2026-08-19T12:07:26Z",
+      "receipt": "17-zh-portrait-seed-journey.json"
+    },
+    {
+      "video": "18-en-landscape-history-of-flight",
+      "title": "A Brief History of Human Flight",
+      "narration_language": "English",
+      "source_url": "https://github.com/harry0703/mpt-assets/releases/download/assets/18-en-landscape-history-of-flight.mp4",
+      "http_status": 200,
+      "content_type": "video/mp4",
+      "sha256": "b345fed0309008c0d699bc42dc10b8b56b7568ba1a5803105c132d081f00c19a",
+      "downloaded_at_utc": "2026-08-19T12:06:01Z",
+      "graded_at_utc": "2026-08-19T12:07:28Z",
+      "receipt": "18-en-landscape-history-of-flight.json"
+    }
+  ],
+  "subject_repo_metadata": {
+    "source": "https://api.github.com/repos/harry0703/MoneyPrinterTurbo",
+    "checked_at_utc": "2026-08-19T12:10:42Z",
+    "stargazers_count": 109647,
+    "forks_count": 16649,
+    "created_at": "2024-03-11T02:57:34Z",
+    "pushed_at": "2026-08-19T08:30:15Z",
+    "license": "MIT"
+  }
+}
